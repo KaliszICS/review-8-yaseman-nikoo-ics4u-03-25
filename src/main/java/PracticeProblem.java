@@ -1,6 +1,7 @@
 public class PracticeProblem {
 
 	public static void main(String args[]) {
+		
 
 	}
 	public static String pluralize(String word){
@@ -12,7 +13,7 @@ public class PracticeProblem {
 			String suffix= "eys";
 			return suffix;
 		}
-		else if (word.endsWith("y")){
+		else if (word.endsWith("y") || word.endsWith("Y")){
 			String suffix= "ies";
 			return suffix;
 		}
@@ -20,7 +21,7 @@ public class PracticeProblem {
 			String suffix= "s";
 			return suffix;
 		}
-		}
+	}
 	public static int min(int num1, int num2, int num3){
 		if (num1<=num2 && num1<=num3){
 			return num1;
@@ -32,5 +33,23 @@ public class PracticeProblem {
 			return num3;
 		}
 		}
-
+	public static boolean isLeapYear(int num){
+		boolean answer;
+		if (num%4==0){
+			if (num%100==0){
+				if (num%400==0){
+					answer= true;}
+				else{
+					answer=false;
+				}
+			}
+			else{
+				answer= true;
+			}
+		}
+		else{
+			answer=false;
+		}
+		return answer;
+	}
 	}
